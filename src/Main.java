@@ -5,9 +5,12 @@ public class Main
 	public static void main(String[] args)
 	{
 		int n = 10;
-		for(int i = 0; i < 10; i++)
+		for (int i = 0; i < 10; i++)
 			System.out.println("i = " + i + " : " + nbIterations(n, i-1) + " x " + (double)nbIterations(n, i)/nbIterations(n, i-1) + " = " + nbIterations(n, i));
 		
+		int i = 10-1;
+		for (n = 2; n < 12; n++)
+			System.out.println("n = " + n + " : " + nbIterations(n-1, i) + " x " + (double)nbIterations(n, i)/nbIterations(n-1, i) + " = " + nbIterations(n, i));
 		
 	}
 	public static long nbIterations(int n, int i)
